@@ -1,13 +1,13 @@
 {
   "name": "xmrig",
-  "version": "3.0.0",
+  "version": "6.21.1",
   "description": "RandomX, CryptoNight and Argon2 miner",
   "main": "index.js",
   "directories": {
     "doc": "doc"
   },
   "scripts": {
-    "build": "node scripts/generate_cl.js"
+    "build": "node-gyp configure && node-gyp build"
   },
   "repository": {
     "type": "git",
