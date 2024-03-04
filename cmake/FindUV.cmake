@@ -16,7 +16,7 @@ find_library(
     NO_DEFAULT_PATH
 )
 
-find_library(UV_LIBRARY NAMES libuv.a uv libuv)
+find_library(UV_LIBRARY NAMES libuv.so uv libuv)
 
 set(UV_LIBRARIES ${UV_LIBRARY})
 set(UV_INCLUDE_DIRS ${UV_INCLUDE_DIR})

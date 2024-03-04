@@ -16,7 +16,7 @@ find_library(
     NO_DEFAULT_PATH
 )
 
-find_library(HWLOC_LIBRARY NAMES hwloc.a hwloc libhwloc)
+find_library(HWLOC_LIBRARY NAMES hwloc.so hwloc libhwloc)
 
 set(HWLOC_LIBRARIES ${HWLOC_LIBRARY})
 set(HWLOC_INCLUDE_DIRS ${HWLOC_INCLUDE_DIR})

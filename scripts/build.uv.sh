@@ -13,8 +13,8 @@ tar -xzf v${UV_VERSION}.tar.gz
 
 cd libuv-${UV_VERSION}
 sh autogen.sh
-./configure --disable-shared
+./configure --enable-shared=yes CFLAGS="-fPIC"
 make -j$(nproc || sysctl -n hw.ncpu || sysctl -n hw.logicalcpu)
 cp -fr include ../../deps
-cp .libs/libuv.a ../../deps/lib
+cp .libs/libuv.so ../../deps/lib
 cd ..
