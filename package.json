@@ -2,19 +2,25 @@
   "name": "xmrig",
   "version": "6.21.1",
   "description": "RandomX, CryptoNight and Argon2 miner",
-  "main": "index.js",
+  "main": "index.ts",
   "directories": {
     "doc": "doc"
   },
+  "scripts": {
+    "postinstall": "bash build.sh"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xmrig/xmrig.git"
+    "url": "git+https://github.com/dev-swarup/xmrig.git"
   },
   "keywords": [],
   "author": "",
   "license": "GPLv3",
   "bugs": {
-    "url": "https://github.com/xmrig/xmrig/issues"
+    "url": "https://github.com/dev-swarup/xmrig/issues"
   },
-  "homepage": "https://github.com/xmrig/xmrig#readme"
+  "homepage": "https://github.com/dev-swarup/xmrig#readme",
+  "devDependencies": {
+    "@types/bun": "1.0.8"
+  }
 }
