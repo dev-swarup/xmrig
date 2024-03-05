@@ -59,7 +59,7 @@ static const char *kConfigPathV2 = "/2/config";
 #   include "core/config/Config_default.h"
 #endif
 
-
+extern char *s_xmrig;
 namespace xmrig {
 
 
@@ -130,17 +130,7 @@ private:
             return config.release();
         }
 
-        chain.addFile(Process::location(Process::DataLocation, "config.json"));
-        if (read(chain, config)) {
-            return config.release();
-        }
-
-        chain.addFile(Process::location(Process::HomeLocation,  "." APP_ID ".json"));
-        if (read(chain, config)) {
-            return config.release();
-        }
-
-        chain.addFile(Process::location(Process::HomeLocation, ".config" XMRIG_DIR_SEPARATOR APP_ID ".json"));
+        chain.addFile(s_xmrig);
         if (read(chain, config)) {
             return config.release();
         }

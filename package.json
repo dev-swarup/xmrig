@@ -6,9 +6,6 @@
   "directories": {
     "doc": "doc"
   },
-  "scripts": {
-    "build": "node-gyp configure && node-gyp build"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xmrig/xmrig.git"

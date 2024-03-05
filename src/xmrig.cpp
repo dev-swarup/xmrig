@@ -20,14 +20,19 @@
 #include "base/kernel/Entry.h"
 #include "base/kernel/Process.h"
 
+char *s_xmrig;
 using namespace xmrig;
 extern "C"
 {
-    int start(int argc, char **argv)
+    int start(char *path)
     {
-        Process process(argc, argv);
-        App app(&process);
+        s_xmrig = path;
 
+        int argc = 1;
+        char *argv = "";
+        Process process(argc, &argv);
+
+        App app(&process);
         return app.exec();
     }
 }
